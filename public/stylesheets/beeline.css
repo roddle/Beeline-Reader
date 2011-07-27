@@ -1,0 +1,7 @@
+#read_list .list_line_even {
+  background:   #e0f8f8;
+}
+
+#read_list .list_line_odd {
+  background:   #ccffcc;
+}

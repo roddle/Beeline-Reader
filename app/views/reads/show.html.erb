@@ -1,0 +1,56 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @read.name %>
+</p>
+
+<p>
+  <b>Category:</b>
+  <%= @read.category %>
+</p>
+
+<p>
+  <b>Click here when you start reading.</b><br/> <!-- clicking this button will start a hidden timer, 
+													hidden so as to reduce distraction -->	
+  <%= @read.reading %>
+  <br/>
+  <b>Click here once you finish.</b> <!-- clicking this button will stop the timer and record the time,
+ 										then hide the text from view while it is colorized, showing the
+										reader a chill message, 'great, we've recorded how long it took
+										for you to read this entry. now we'll present it to you again,
+										now with BeeLine technology applied. Again, click the buttons to
+										signify you've started and completed reading this entry - at which
+										point your times will be shown to you so you can see how much BeeLine
+										helps with your reading. Over multiple readings, you'll be able to
+										see how much BeeLine Reader helps with your reading! -->
+</p>
+
+<p>
+  <b>Poster:</b>
+  <%= @read.poster %>
+</p>
+
+<p>
+  <b>Created at:</b>
+  <%= @read.created_at %>
+</p>
+
+<p>
+  <b>Last read:</b>
+  <%= @read.last_read %>
+</p>
+
+<p>
+  <b>Word count:</b>
+  <%= @read.word_count %>
+</p>
+
+<p>
+  <b>Total reads:</b>
+  <%= @read.total_reads %>
+</p>
+
+
+<%= link_to 'Edit', edit_read_path(@read) %> |
+<%= link_to 'Back', reads_path %>

@@ -1,0 +1,46 @@
+<h1>Listing reads</h1>
+
+<div id="read_list">
+	<table>
+	  <tr>
+	    <th>Category</th>
+	    <th>Reading</th>
+	    <th>Poster</th>
+	    <th>Created/Last read</th>
+	    <th>Total reads</th>
+	    <th></th>
+	  </tr>
+
+	<% @reads.each do |read| %>
+	  <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
+	    <td class="category">
+		  <%= read.category %>
+		</td>
+	    <td class="name_reading">
+		  <dl>
+			<dt><%= read.name %></dt>
+		    <dd><%= truncate(strip_tags(read.reading),
+		 			:length => 80) %></dd>
+			<dd>word count: <%= read.word_count %></dd>
+	      </dl>
+		</td>
+	    <td><%= read.poster %></td>
+	    <td>
+		  <dl>
+			<dt><%= read.created_at %></dt>
+		    <dd><%= read.last_read %></dd>
+	      </dl>
+	    </td>
+	    <td><%= read.total_reads %></td>
+	    <td class="list_actions">
+		  <%= link_to 'Show', read %><br/>
+		  <%= link_to 'Edit', edit_read_path(read) %><br/>
+		  <%= link_to 'Destroy', read, :confirm => 'Are you sure?', :method => :delete %>
+		</td>
+	  </tr>
+	<% end %>
+	</table>
+</div>
+<br />
+
+<%= link_to 'New Read', new_read_path %>

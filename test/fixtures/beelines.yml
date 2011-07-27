@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  reader: MyString
+  normal_time: 9.99
+  beeline_time: 9.99
+  rating: 1
+  flag: 1
+  read: 
+
+two:
+  reader: MyString
+  normal_time: 9.99
+  beeline_time: 9.99
+  rating: 1
+  flag: 1
+  read: 

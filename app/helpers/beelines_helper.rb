@@ -1,0 +1,2 @@
+module BeelinesHelper
+end
