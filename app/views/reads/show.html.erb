@@ -1,56 +1,51 @@
+<%= javascript_include_tag "fancyzoom" %>
+<%= javascript_include_tag "mytimers" %>
+<%= javascript_include_tag "colorit" %>
 <p id="notice"><%= notice %></p>
 
+<h2>Press the Start and Stop buttons each time you commence and finish reading the selections on this page.</h2>
+<p class="italic">One half of the reading is colored using Beeline technology, the other half is not. The order in which this occurs is random.</p>
+<br>
+<br>
+<div id="beeline_start1"></div>
+<div id="beeline_start2"></div>
+<div id="flag_start2"></div>
+<div id="flag_stop2"></div>
+<div id="bee_or_norm_first"></div>
+<div id="word_count" class="<%= @read.word_count %>"></div><br>
+
+
+<a href="#start_box" id="start_box_link"><%= image_tag("start.png") %></a>
+<br><br>
+<p id="1stread">  
+  <%= @reading1 %></p>
+<p id="2ndread">
+  <%= @reading2 %></p>
+<p id="doneReading">
+	Great! You've just completed reading this entry, half of it was colored using Beeline Reader technology. Below you should see the number of seconds it took to read each section, as well as the approximate number of words per minute you were reading. These numbers are all an approximation, as the timer used to measure your reading times is not very precise. Use the links below to delete this entry, or to try Beeline Reading again.
+	</p>
+<a href="#stop_box" id="stop_box_link"><%= image_tag("stop.png") %></a>
+<div id="stop_box">
+  <h2>First half of reading is complete.</h2>
+  <p><strong>Be sure to press the Start and Stop buttons again.</strong> The first half of the reading has been hidden from view, now you can continue reading the second half of the selection that you entered for this page.</p>
+</div>
+<br>
+<br>
 <p>
-  <b>Name:</b>
-  <%= @read.name %>
+  <b>Word count:</b>  <%= @read.word_count %><br><br>
+  Time spent reading Beeline section: <input id="beeline_beeline_time" size="5"/><br>
+  WPM Beeline: <input id="beeline_wordcount_time" size="5"/><br><br>
+  Time spent reading the normal section: <input id="beeline_normal_time" size="5" /><br>
+  WPM normal: <input id="normal_wordcount_time" size="5" /><br><br>
+  <input id="percent_gain" size="2" />% gain
 </p>
 
-<p>
-  <b>Category:</b>
-  <%= @read.category %>
-</p>
+<br>
+<br>
+<!-- <%= render :partial => "beelines/beeline", :collection => @read.beelines %> -->
 
-<p>
-  <b>Click here when you start reading.</b><br/> <!-- clicking this button will start a hidden timer, 
-													hidden so as to reduce distraction -->	
-  <%= @read.reading %>
-  <br/>
-  <b>Click here once you finish.</b> <!-- clicking this button will stop the timer and record the time,
- 										then hide the text from view while it is colorized, showing the
-										reader a chill message, 'great, we've recorded how long it took
-										for you to read this entry. now we'll present it to you again,
-										now with BeeLine technology applied. Again, click the buttons to
-										signify you've started and completed reading this entry - at which
-										point your times will be shown to you so you can see how much BeeLine
-										helps with your reading. Over multiple readings, you'll be able to
-										see how much BeeLine Reader helps with your reading! -->
-</p>
-
-<p>
-  <b>Poster:</b>
-  <%= @read.poster %>
-</p>
-
-<p>
-  <b>Created at:</b>
-  <%= @read.created_at %>
-</p>
-
-<p>
-  <b>Last read:</b>
-  <%= @read.last_read %>
-</p>
-
-<p>
-  <b>Word count:</b>
-  <%= @read.word_count %>
-</p>
-
-<p>
-  <b>Total reads:</b>
-  <%= @read.total_reads %>
-</p>
-
-
-<%= link_to 'Edit', edit_read_path(@read) %> |
-<%= link_to 'Back', reads_path %>
+<h2>
+<%= link_to 'Click here to delete the entry you just completed reading.', @read, :id => 'destroy', :method => :delete, :remote => true %>
+<br>
+<%= link_to 'Make Another Read', new_read_path %>
+</h2>

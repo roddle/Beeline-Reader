@@ -1,0 +1,248 @@
+body { background-color: #fff; color: #333; }
+
+body, p, ol, ul, td {
+	font-family: 'HelveticaNeue','Helvetica Neue','Arial',sans-serif;
+	/*font-family: Georgia, Verdana, Arial, "Times New Roman", Sans-Serif;*/
+    font-size: 12px;
+    font-stretch: normal;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 14px;
+    margin: 0;
+    opacity: 1;
+    padding-bottom: 0;
+    padding-top: 0;
+    text-align: justify;
+    text-decoration: none;
+    text-indent: 0;
+    text-transform: none;
+	color: #000;
+}
+
+pre {
+  background-color: #FCFCFC;
+  padding: 10px;
+  font-size: 11px;
+}
+
+a { color: #000; }
+a:visited { color: #111; }
+a:hover { background-color:#ddd; }
+
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+.slogan {
+	text-indent:-2011px;
+	font-size:1px;
+}
+.withbeeline {
+	line-height: 6em;
+	margin: -2.5em 0 0 0;
+	text-align: center;
+}
+.whatisit {
+	font-family: 'HelveticaNeue','Helvetica Neue','Arial',sans-serif;
+    font-size: 12px;
+    font-stretch: normal;
+    font-style: normal;
+    font-variant: normal;
+    letter-spacing: 0;
+    line-height: 14px;
+    opacity: 1;
+    padding-bottom: 0;
+    padding-top: 0;
+    text-align: justify;
+    text-decoration: none;	
+    text-indent: 0;
+    text-transform: none;
+    font-weight: bolder;
+    margin: 0 0 1.2em;
+}
+.blank {
+	color: #fff;
+}
+.italic {
+	font-style: italic;
+}
+.navy {
+	color: #011a92;
+}
+.blue {
+	color: #0433ff;
+}
+.purple {
+	color: #6a22ab;	
+}
+.crimson {
+	color: #a91500;
+}
+.red {
+	color: #ff2600;
+}
+#notice {
+  color: green;
+}
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+/* Styles for main page */
+#beeline_main {
+	width: 1130px;
+}
+#banner { 
+	border-top: 1px solid #ffffff;
+	border-left: 1px solid #ffffff;
+	border-bottom: 1px solid; 
+	background: #f1f3e9; 
+	padding-top: 5px; 
+	padding-bottom: 10px; 
+	font: small-caps 40px/40px "Times New Roman", serif; 
+	color: #f8f8f8; 
+	text-align: left;
+}
+#banner img { 
+	display:inline;
+}
+#columns { 
+	background: #f1f3e9;
+	border-top: 1px solid;
+	color:#dcdcdc;
+}
+#main {
+	margin-left: 7em; 
+	padding-top: 2ex; 
+	padding-left: 3em; 
+	background: white;
+	border-left: 1px solid;
+	color:#dcdcdc;
+	
+}
+#side { 
+	float: left;
+	padding: 2.5em 0.1em 1em 1em;
+	border-right: 1px solid;
+	border-left: 1px solid #ffffff;
+	color:#dcdcdc;
+	width: 6em;
+	height: 800px;
+	background: #f1f3e9;
+}
+#side ul {
+	list-style-type:none; 
+	margin:0;
+	overflow:hidden;
+	width: 5em;
+}
+#side ul li {
+	padding-bottom: 2px;
+}
+#side ul li a {
+	display:block; 
+	text-decoration:none; 
+	text-align:center; 
+	padding:3px 1px 3px 1px; 
+	font-family:Arial; 
+	font-size:8pt; 
+	font-weight:bold; 
+	color:#ffffff; 
+	text-transform:uppercase; 
+	border-right:1px solid #607987; 
+	background-color:#7195aa; 
+	text-transform:uppercase; 
+	letter-spacing:.08em;
+}
+#side ul li a:hover {
+	background-color:#3b6a85; 
+	color:#a2becf;
+}
+#side ul li a.first {
+	border-left:0;
+}
+#side ul li a.last {
+	border-right:0;
+}
+/*#side a { 
+	color: #111; 
+	font-size: small;
+}*/
+#container1 {
+    float:left;
+    width:1010px;
+}
+#container1>.columns {
+	margin: 0 2em 0 -2em;
+	padding: 0 0 0 1.5em;
+}
+#container1>.columns2 {
+	margin: 0 2em 0 -2em;
+	padding: 0.3em 0 0 3.3em;
+}
+#container1 .answers {
+	margin: 0 0 1.2em 0;
+	font-family: 'HelveticaNeue','Helvetica Neue','Arial',sans-serif;
+    font-size: 12px;
+    font-stretch: normal;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 14px;
+    opacity: 1;
+    padding-bottom: 0;
+    padding-top: 0;
+    text-align: justify;
+    text-decoration: none;	
+    text-indent: 0;
+    text-transform: none;
+}
+#col1 {
+    float:left;
+    width:318px;
+}
+#col2 {
+    float:left;
+    width:318px;
+}
+#col3 {
+    float:left;
+    width:265px;
+}
+#col3 p {
+	text-align: left;
+}
+#start_box_link {
+	padding: 5px;
+}
+#stop_box_link {
+	padding: 5px;
+}

@@ -2,7 +2,7 @@ class Read < ActiveRecord::Base
   validates :reading,   :presence =>  true
   validates :reading,   :length => { 
     :minimum => 20,
-    :maximum => 10000,
+    :maximum => 100000,
     :too_short => "%{count} characters is the minimum allowed",
     :too_long => "%{count} characters is the maximum allowed" 
   }

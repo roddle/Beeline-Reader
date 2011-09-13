@@ -1,0 +1,25 @@
+<h1>Listing read_items</h1>
+
+<table>
+  <tr>
+    <th>Beeline</th>
+    <th>Chart</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @read_items.each do |read_item| %>
+  <tr>
+    <td><%= read_item.beeline_id %></td>
+    <td><%= read_item.chart_id %></td>
+    <td><%= link_to 'Show', read_item %></td>
+    <td><%= link_to 'Edit', edit_read_item_path(read_item) %></td>
+    <td><%= link_to 'Destroy', read_item, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Read item', new_read_item_path %>

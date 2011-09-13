@@ -1,4 +1,9 @@
 class ReadsController < ApplicationController
+  
+  def countWords(reading)
+    reading.scan(/[\w-]+/).size;
+  end
+    
   # GET /reads
   # GET /reads.xml
   def index
@@ -14,7 +19,16 @@ class ReadsController < ApplicationController
   # GET /reads/1.xml
   def show
     @read = Read.find(params[:id])
-
+    
+    read_length = @read.reading.length;
+    read1 = read_length / 2;
+    read1 = read1.floor;
+    read2 = read1.ceil;
+    
+    # will need to scan back to end of first word found to set the needed read1 point
+    @reading1 = @read.reading[1,read1];
+    @reading2 = @read.reading[read2,read_length];
+    
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @read }
@@ -25,7 +39,7 @@ class ReadsController < ApplicationController
   # GET /reads/new.xml
   def new
     @read = Read.new
-
+    
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @read }
@@ -42,7 +56,8 @@ class ReadsController < ApplicationController
   def create
     @read = Read.new(params[:read])
     
-    @read.word_count = @read.reading.scan(/[\w-]+/).size
+    @read.word_count = countWords(@read.reading);
+    @read.total_reads = 0
 
     respond_to do |format|
       if @read.save
@@ -59,9 +74,8 @@ class ReadsController < ApplicationController
   # PUT /reads/1.xml
   def update
     @read = Read.find(params[:id])
+    @read.word_count = countWords(@read.reading);
     
-    @read.word_count = @read.reading.scan(/[\w-]+/).size
-
     respond_to do |format|
       if @read.update_attributes(params[:read])
         format.html { redirect_to(@read, :notice => 'Read was successfully updated.') }
@@ -81,6 +95,7 @@ class ReadsController < ApplicationController
 
     respond_to do |format|
       format.html { redirect_to(reads_url) }
+      format.js
       format.xml  { head :ok }
     end
   end

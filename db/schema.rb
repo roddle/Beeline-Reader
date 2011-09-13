@@ -10,15 +10,28 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110727041639) do
+ActiveRecord::Schema.define(:version => 20110819202331) do
 
   create_table "beelines", :force => true do |t|
     t.string   "reader"
-    t.decimal  "normal_time",  :precision => 8, :scale => 2
-    t.decimal  "beeline_time", :precision => 8, :scale => 2
+    t.decimal  "normal_time"
+    t.decimal  "beeline_time"
     t.integer  "rating"
     t.integer  "flag"
     t.integer  "read_id"
+    t.datetime "created_at",   :default => '2011-08-19 20:25:44'
+    t.datetime "updated_at"
+    t.string   "e_mail"
+  end
+
+  create_table "charts", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "read_items", :force => true do |t|
+    t.integer  "beeline_id"
+    t.integer  "chart_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

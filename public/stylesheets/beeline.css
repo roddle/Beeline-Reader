@@ -5,3 +5,10 @@
 #read_list .list_line_odd {
   background:   #ccffcc;
 }
+
+.hidden {
+    display:none;
+}
+.beeline {
+	letter-spacing:-7px;
+}

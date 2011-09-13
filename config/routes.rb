@@ -1,4 +1,8 @@
 Beelinereader::Application.routes.draw do
+  resources :read_items
+
+  resources :charts
+
   get "home/index"
 
   resources :reads do
@@ -12,6 +16,8 @@ Beelinereader::Application.routes.draw do
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action
 
+  match "/read" => "reads#show"
+  
   # Sample of named route:
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
   # This route can be invoked with purchase_url(:id => product.id)

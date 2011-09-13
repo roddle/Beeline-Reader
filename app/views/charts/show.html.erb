@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+<h2>Beeline Charts</h2>
+<ul>
+	<% @chart.read_items.each do |item| %>
+	  <li><%= debug item %></li>
+	<% end %>
+</ul>
+<%= link_to 'Edit', edit_chart_path(@chart) %> |
+<%= link_to 'Back', charts_path %>

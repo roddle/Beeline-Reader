@@ -1,0 +1,14 @@
+<div class="beeline">
+  <% new_only = beeline.new_record? ? 'new' : 'existing' %>
+  <% prefix = "read[#{new_only}_beeline_attributes][]" %>
+
+  <% fields_for prefix, beeline do |beeline_form| -%>
+    <p>
+	  Reader: <%= beeline_form.text_field :reader %><br/>
+	  BeeLine reading-time: <%= beeline_form.text_field :beeline_time %><br/>
+	  Normal reading-time: <%= beeline_form.text_field :normal_time %><br/>
+	  Your rating of this read: <%= beeline_form.text_field :rating %><br/>
+	  Innappropriate? <%= beeline_form.select :flag, [['No', 0], ['Wrong Category', 1], ['Jibberish', 2], ['Just rude', 3]]  %>
+	</p>
+  <% end -%>
+</div>

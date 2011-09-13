@@ -1,0 +1,13 @@
+<% unless beeline.beeline_time.blank? %>
+  <p>
+    <b>Reader:</b>
+    <%= beeline.reader %><br/>
+    <b>Reading Times:</b><br/>
+    Beeline: <%= beeline.beeline_time %><br/>
+	Normal: <%= beeline.normal_time %><br/>
+	<%= link_to 'Destroy Beeline', [beeline.read, beeline],
+				:confirm => 'Are you sure?',
+				:method => :delete %>
+	<%= button_to 'Chart this BeeLine', read_items_path(:beeline_id => beeline) %>
+  </p>
+<% end %>

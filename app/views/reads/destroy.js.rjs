@@ -1,0 +1,1 @@
+page.replace_html('destroy', 'This selection has been erased.')

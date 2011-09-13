@@ -1,0 +1,25 @@
+<%= form_for([@read, @read.beelines.build]) do |f| %>
+  <div class="field">
+    <%= f.label :reader %><br />
+    <%= f.text_field :reader %>
+  </div>
+  <div class="field">
+    <%= f.label :beeline_time %><br />
+    <%= f.text_field :beeline_time %>
+  </div>
+  <div class="field">
+    <%= f.label :normal_time %><br />
+    <%= f.text_field :normal_time %>
+  </div>
+  <div class="field">
+    <%= f.label :rating %><br />
+    <%= f.text_field :rating %>
+  </div>
+  <div class="field">
+    <%= f.label "Is this reading inappropriate?" %><br />
+    <%= f.select :flag, [['No', 0], ['Wrong Category', 1], ['Jibberish', 2], ['Just rude', 3]] %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

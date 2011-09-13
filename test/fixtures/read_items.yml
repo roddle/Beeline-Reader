@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  beeline_id: 1
+  chart_id: 1
+
+two:
+  beeline_id: 1
+  chart_id: 1

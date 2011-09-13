@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Reading:</b>
+  <%= @read_item.reading_id %>
+</p>
+
+<p>
+  <b>Chart:</b>
+  <%= @read_item.chart_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_read_item_path(@read_item) %> |
+<%= link_to 'Back', read_items_path %>
